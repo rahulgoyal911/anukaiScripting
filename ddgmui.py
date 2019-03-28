@@ -12,10 +12,23 @@ tr_elements = doc.xpath('//tr')
 tr_elements = doc.xpath('//tr')
 #Create empty list
 col=[]
-i=0
 #For each row, store each first element (header) and an empty list
-for t in tr_elements[3]:
-    i+=1
-    name=t.text_content()
-    print ('%d:"%s"'%(i,name))
-    col.append((name,[]))
+for time in tr_elements[0]:
+    n = str(time.text_content())
+name = "ddgmuiData/"
+name += n
+name += ".txt"
+file = open(name,'w')     
+for k in range(3,31):
+    for t in tr_elements[k]:
+        name=t.text_content()
+        # print ('%d:"%s"'%(i,name))
+        col.append((name,))
+    col.append("\n")
+for i in col:
+    for j in i:
+        file.write(j)
+        file.write(" ")
+    # file.write("\n")
+    # col = []
+file.close()
