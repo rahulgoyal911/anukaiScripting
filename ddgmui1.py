@@ -24,7 +24,7 @@ def func(index):
     for t in tr_elements[index]:
         data=str(t.text_content())
         c.append(data)
-
+         # print(c[1])
     c[2] = c[2].replace("\r\n"," ")
     # print(c[0]) 
     # print(c[1])
@@ -39,6 +39,6 @@ def func(index):
             writer.writerow(row)
     c[2] = []
     
-for index in range(3,33):
+for index in range(3,30):
     func(index)
 print("done")
