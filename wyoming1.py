@@ -9,11 +9,11 @@ def getData(year,month,from1,to,statio):
     response = requests.get(url)
     response = str(response.content)
     response = response[3:]
-    TTAA = ""
-    TTBB = ""
-    TTCC = ""
-    TTDD = ""
-    PPBB = ""
+    TTAA = "null"
+    TTBB = "null"
+    TTCC = "null"
+    TTDD = "null"
+    PPBB = "null"
     listt = []
     listt = response.split("\\n ")
     for el in listt:
